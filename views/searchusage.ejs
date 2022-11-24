@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/head %>
+        <div>
+            <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/usages/create">Add usage</a></li>
+            <li><a href="/usages/all">All usages</a></li>
+            <li><a href="/usages/search">Search</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/help">Help</a></li>
+            </ul>
+        </div>
+            <link rel='stylesheet' href='/stylesheets/style.css' />
+            <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+        </head>
+
+        <div class="wrapper">
+            <h1><a"><%= title %></a></h1>
+            <body>
+                <table class="table table-inverse">
+        <form action="/usages/search" method="post">
+            <div class="form-group">
+                <label for="searchName">Name</label>
+                <input type="text" class="form-control" id="searchName" pattern="[A-Za-z]+" name="searchName" placeholder="Enter a name">
+                <br> </br>
+            </div>
+            <div class="form-group">
+                <label for="fromDate">From</label>
+                <input type="date" class="form-control" id="fromDate" name="fromDate" placeholder="Enter from date">
+                <br> </br>
+            </div>
+            <div class="form-group">
+                <label for="toDate">To</label>
+                <input type="date" class="form-control" id="toDate" name="toDate" placeholder="Enter to date">
+                <br> </br>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <% include partials/foot %>
+</html>

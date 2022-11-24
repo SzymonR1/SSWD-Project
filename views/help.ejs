@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/head %>
+        <div>
+            <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/usages/create">Add usage</a></li>
+            <li><a href="/usages/all">All usages</a></li>
+            <li><a href="/usages/search">Search</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/help">Help</a></li>
+            </ul>
+        </div>
+            <link rel='stylesheet' href='/stylesheets/style.css'>
+            <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    </head>
+
+<div class="help">
+    <h1><a><%= title %></a></h1>
+    <div class="help">
+        <p>
+            If you need any help regarding this page, contact me at <a href="mailto:szymon.renka@mycit.ie">szymon.renka@mycit.ie</a>
+        </p>
+</div>
+<% include partials/foot %>
+
+</html>

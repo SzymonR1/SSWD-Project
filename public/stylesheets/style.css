@@ -1,0 +1,145 @@
+/* All usages table */
+
+thead,
+tfoot {
+    background-color: #3f87a6;
+    color: #fff;
+}
+
+tbody {
+  background-color: #494949;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  font-size: .9rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px 10px;
+}
+
+td {
+    text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.tp {
+  text-align: center;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+/* Global body */
+
+body {
+  background-color: rgb(52, 52, 52);
+  font: 14px "Verdana";
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+label {
+  display: inline-block;
+  width:100px;
+  text-align: right;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.0rem;
+  background-color: #3f87a6;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+/* on button hover */
+
+button:hover {
+  background-color: #76AEED;
+  cursor: pointer;
+}
+
+
+/* Navbar */
+
+.navbar {
+  top: 0;
+  left: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3f87a6;
+  font-size: .9rem;
+  border-radius: 3px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #76AEED;
+}
+
+h1 {
+  text-decoration: none;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+
+/* Input */
+
+input {
+  padding: 10px;
+}
+
+/* make date input the same size and center text */
+
+input[type="date"] {
+  width: 140px;
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include partials/head %>
+        <div>
+            <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/usages/create">Add usage</a></li>
+            <li><a href="/usages/all">All usages</a></li>
+            <li><a href="/usages/search">Search</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/help">Help</a></li>
+            </ul>
+        </div>
+            <link rel='stylesheet' href='/stylesheets/style.css' />
+            <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    </head>
+
+<div class="about">
+    <h1><a><%= title %></a></h1>
+    <div class="about">
+        <p>
+            This page was created as part of the Server Side Web Development module.
+            <br> <br>
+            The idea is that you can use this application to track and monitor your phone usage
+            <br>
+            for the following topics: education, shopping, browsing and social media.
+            <br> <br>
+            You can refine your search to be more specific. For example, you can search by name or date.
+            <br> <br>
+            The application is built using Node.js, Express.js and MongoDB.
+        </p>
+</div>
+<% include partials/foot %>
+
+</html>

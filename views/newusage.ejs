@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head %>
+    <div>
+        <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/usages/create">Add usage</a></li>
+        <li><a href="/usages/all">All usages</a></li>
+        <li><a href="/usages/search">Search</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/help">Help</a></li>
+        </ul>
+    </div>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+  </head>
+    <div class="wrapper">
+        <h1><a><%= title %></a></h1>
+        <div class="ra-r"></div>
+        <body>
+            <div class="inputs">
+              <form action="/usages/create" method="post">
+                <label>Name</label>
+              <input type="text" name="name" pattern="[A-Za-z]+" placeholder="Enter your name" required>
+                <br> <br> <br>
+                <label>Date</label>
+              <input type="date" name="date" required>
+                <br> <br>
+                <label>Education (mins)</label>
+              <input type="number" name="usage1" min="0" max="999" placeholder="0" required>
+                <br> <br>
+                <label>Shopping (mins)</label>
+              <input type="number" name="usage2" min="0" max="999" placeholder="0" required>
+                <br> <br>
+                <label>Browsing (mins)</label>
+              <input type="number" name="usage3" min="0" max="999" placeholder="0" required>
+                <br> <br>
+                <label>Social Media (mins)</label>
+              <input type="number" name="usage4" min="0" max="999" placeholder="0" required>
+                <br> <br>
+              <button>Submit</button>
+                </form>
+              </div>
+        </body>
+    </div>
+</div>
+    <% include partials/foot %>
+
+</html>

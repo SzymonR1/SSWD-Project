@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head %>
+    <div>
+        <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/usages/create">Add usage</a></li>
+        <li><a href="/usages/all">All usages</a></li>
+        <li><a href="/usages/search">Search</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/help">Help</a></li>
+        </ul>
+    </div>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+  </head>
+        <div class="wrapper">
+            <h1><a><%= title %></a></h1>
+            <div class="ra-r"></div>
+            <body>
+            <table class="table table-inverse">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Education (mins)</th>
+        <th>Shopping (mins)</th>
+        <th>Browsing (mins)</th>
+        <th>Social Media (mins)</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <% for(var i=0; i < usagelist.length; i++) { %>
+     <tr>
+
+       <td><%= usagelist[i].name %></td>
+       <td><%= usagelist[i].date.toDateString() %></td>
+       <td><%= usagelist[i].usage1 %></td>
+       <td><%= usagelist[i].usage2 %></td>
+       <td><%= usagelist[i].usage3 %></td>
+       <td><%= usagelist[i].usage4 %></td>
+
+        <td><a href="/usages/delete/<%= usagelist[i]._id %>">Delete</a></td>
+        <td><a href="/usages/edit/<%= usagelist[i]._id %>">Edit</a></td>
+
+     </tr>
+  <% } %>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td>Average</td>
+        <td></td>
+        <td><%= (usagelist.reduce((a, b) => a + b.usage1, 0) / usagelist.length).toFixed(2) %></td>
+        <td><%= (usagelist.reduce((a, b) => a + b.usage2, 0) / usagelist.length).toFixed(2) %></td>
+        <td><%= (usagelist.reduce((a, b) => a + b.usage3, 0) / usagelist.length).toFixed(2) %></td>
+        <td><%= (usagelist.reduce((a, b) => a + b.usage4, 0) / usagelist.length).toFixed(2) %></td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+</body>
+</div>
+</div>
+<% include partials/foot %>
+
+</html>

@@ -1,0 +1,33 @@
+<head>
+  <% include partials/head %>
+  <div>
+      <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/usages/create">Add usage</a></li>
+      <li><a href="/usages/all">All usages</a></li>
+      <li><a href="/usages/search">Search</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/help">Help</a></li>
+      </ul>
+  </div>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+</head>
+
+<div class="wrapper">
+    <h1><%= title %></h1>
+    <div class="ra-r">
+        <div class="tp">
+            <button onclick="location.href='/usages/create'" type="button">Add usage</button>
+            <br> </br>
+            <button onclick="location.href='/usages/all'" type="button">All usages</button>
+            <br> </br>
+            <button onclick="location.href='/usages/search'" type="button">Search</button>
+            <br> </br>
+            <button onclick="location.href='/about'" type="button">About</button>
+            <br> </br>
+            <button onclick="location.href='/help'" type="button">Help</button>
+        </div>
+      </div>
+</div>
+<%include partials/foot %>
